@@ -21,9 +21,6 @@ Este proyecto contiene la configuración completa de ESPHome para controlar el v
 
 - Un ESP32 (modelo `esp32dev` u otro)
 - Ventilador WIND CALM con control Tuya UART
-- Cableado UART:
-  - TX ESP32 → RX del ventilador
-  - RX ESP32 → TX del ventilador
 
 ---
 
@@ -32,5 +29,9 @@ El control de luz incluye selector de temperatura (no RGB).
 
 El datapoint de velocidad va del 1 al 6, donde 1 representa el 1% y 6 el 100%.
 
-Este dispositivo no necesita automatizaciones externas para funcionar completamente.
+El UART solo funciona si el módulo original (CB3S) se ha retirado.
+
+Algunos ESP requieren invertir TX/RX (cruzado).
+
+El dispositivo debe tener buena cobertura Wi-Fi o usar un ESP con mejor antena.
 
