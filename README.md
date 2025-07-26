@@ -25,6 +25,7 @@ Este proyecto contiene la configuración completa de ESPHome para controlar el v
 ---
 
 ❗ Notas
+
 El control de luz incluye selector de temperatura (no RGB).
 
 El datapoint de velocidad va del 1 al 6, donde 1 representa el 1% y 6 el 100%.
