@@ -24,6 +24,20 @@ Este proyecto contiene la configuración completa de ESPHome para controlar el v
 
 ---
 
+## 📡 Datapoints conocidos del ventilador WIND CALM
+
+| DP  | Función                              | Tipo        | Valores conocidos               | Comentarios                                                                 |
+|-----|--------------------------------------|-------------|----------------------------------|------------------------------------------------------------------------------|
+| 20  | Luz ON/OFF                           | Boolean     | `true` / `false`                | Enciende o apaga la luz                                                     |
+| 23  | Temperatura de color de la luz       | Número      | `0`, `500`, `1000`              | 3 tonos de blanco disponibles (no es RGB)                                   |
+| 60  | Ventilador ON/OFF                    | Boolean     | `true` / `false`                | Enciende o apaga el motor del ventilador                                   |
+| 62  | Velocidad del ventilador             | Número      | `1` a `6`                       | 6 velocidades (1 % a 100 %)                                                 |
+| 63  | Dirección de giro                    | Enum        | `0`, `1`                        | 0: sentido normal, 1: sentido inverso                                       |
+| 64  | Temporizador de apagado              | Número      | `1` a `N` (minutos)             | ⚠️ No recomendable: puede bloquear UART hasta reinicio manual               |
+| 66  | Sonido / Beep                        | Boolean     | `true` / `false`                | Activa o silencia los pitidos al usar el mando o UART                      |
+
+---
+
 ## ⚠️ Notas y recomendaciones
 
 - La luz del ventilador es solo **blanca**, no RGB. La selección de temperatura de color funciona correctamente mediante el datapoint `23` (niveles: 0, 500, 1000).
