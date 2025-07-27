@@ -1,7 +1,9 @@
 🌀 Ventilador WIND CALM – Integración con ESPHome
+
 Este proyecto contiene la configuración completa de ESPHome para controlar el ventilador de techo WIND CALM de la marca CREATE, el cual utiliza comunicación UART con un chip Tuya. Es totalmente compatible con Home Assistant.
 
 ✅ Funcionalidades
+
 Encendido y apagado del ventilador
 
 Control de 6 velocidades (valores del 1 al 6 → 1% a 100%)
@@ -19,11 +21,13 @@ Monitoreo de la señal Wi-Fi y del tiempo de actividad del ESP
 Reinicio remoto del ESP32 desde Home Assistant
 
 🧰 Requisitos
+
 Un ESP32 (por ejemplo, placa esp32dev)
 
 Ventilador WIND CALM con control UART basado en Tuya
 
 ⚠️ Notas y recomendaciones
+
 La luz del ventilador es solo blanca, no RGB. La selección de temperatura de color funciona correctamente mediante el datapoint 23 (niveles: 0, 500, 1000).
 
 Las velocidades del ventilador van del 1 al 6 (donde 1 es el 1 % y 6 el 100 %). Se deben usar valores enteros.
