@@ -3,8 +3,8 @@ esphome:
   friendly_name: Create Wind Fan ESP32
   on_boot:
     then:
-      # Al arrancar, silenciamos el beep por seguridad
-      # On boot, mute beep for safety
+      # Al arrancar, silenciamos el beep
+      # On boot, mute beep
       - switch.turn_off: beep_silenciar
 
 esp32:
