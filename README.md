@@ -1,3 +1,5 @@
+[🇬🇧 Read this in English](README.md)
+
 # 🌀 Ventilador WIND CALM – Integración con ESPHome
 
 Este proyecto contiene la configuración completa de ESPHome para controlar el ventilador de techo WIND CALM de la marca CREATE, el cual utiliza comunicación UART con un chip Tuya. Es totalmente compatible con Home Assistant.
