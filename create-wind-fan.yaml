@@ -54,8 +54,8 @@ time:
 # UART para comunicación con la placa Tuya (verifica pines en tu placa)
 # UART for communication with Tuya board (check pins for your board)
 uart:
-  tx_pin: GPIO16   # TX (ESP -> ventilador RX)
-  rx_pin: GPIO17   # RX (ESP <- ventilador TX)
+  tx_pin: GPIO21
+  rx_pin: GPIO20 
   baud_rate: 9600
   stop_bits: 1
 
