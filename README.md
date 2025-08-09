@@ -21,8 +21,9 @@ Este proyecto contiene la configuración completa de ESPHome para controlar el v
 
 - Un ESP32 C3 SuperMini con antena externa (recomendado por su mejor alcance Wi-Fi en instalaciones con carcasa metálica o interferencias).
 - Ventilador WIND CALM con control UART basado en Tuya  
-![IMG20250614200401](https://github.com/user-attachments/assets/c6f3eaaa-74be-4a08-b94f-f7bb6d09eda1)
-![IMG20250707100543](https://github.com/user-attachments/assets/b01adcb4-3eca-4b46-a009-985697ffa359)
+<img src="https://github.com/user-attachments/assets/c6f3eaaa-74be-4a08-b94f-f7bb6d09eda1" alt="Ventilador WIND CALM" width="400">
+<img src="https://github.com/user-attachments/assets/b01adcb4-3eca-4b46-a009-985697ffa359" alt="ESP32 C3 SuperMini" width="400">
+
 
 ---
 
