@@ -1,5 +1,5 @@
 esphome:
-  name: create-wind-fan
+  name: create-wind-fan 
   friendly_name: Create Wind Fan ESP32
   on_boot:
     then:
