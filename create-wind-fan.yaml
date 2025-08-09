@@ -4,6 +4,7 @@ esphome:
   on_boot:
     then:
       # Al arrancar, silenciamos el beep por seguridad
+      # On boot, mute beep for safety
       - switch.turn_off: beep_silenciar
 
 esp32:
@@ -12,6 +13,7 @@ esp32:
     type: arduino
 
 # Logger: no usar UART0 para evitar interferencias con el bus serie del ventilador
+# Logger: do not use UART0 to avoid interference with the fan's serial bus
 logger:
   baud_rate: 0
 
@@ -25,6 +27,7 @@ ota:
     password: !secret ota_password
 
 # Wi-Fi: usar secretos, mejorar conexión con fast_connect y desactivar power save
+# Wi-Fi: use secrets, improve connection with fast_connect and disable power save
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
@@ -32,6 +35,7 @@ wifi:
   power_save_mode: none
 
   # Punto de acceso de fallback (solo para emergencia). Protege contraseña en secrets.
+  # Fallback access point (emergency only). Protect password in secrets.
   ap:
     ssid: "create-wind-fallback"
     password: !secret ap_password
@@ -48,6 +52,7 @@ time:
     id: homeassistant_time
 
 # UART para comunicación con la placa Tuya (verifica pines en tu placa)
+# UART for communication with Tuya board (check pins for your board)
 uart:
   tx_pin: GPIO16   # TX (ESP -> ventilador RX)
   rx_pin: GPIO17   # RX (ESP <- ventilador TX)
@@ -122,9 +127,13 @@ number:
 
 
 
-# --- Notas / recomendaciones (comentadas dentro del YAML) ---
+# --- Notas / recomendaciones ---
 # - Mantén las claves secretas en secrets.yaml: wifi_ssid, wifi_password, api_encryption_key, ota_password, ap_password.
+# - Keep secret keys in secrets.yaml: wifi_ssid, wifi_password, api_encryption_key, ota_password, ap_password.
+#
 # - Si el ventilador no responde tras usar el temporizador interno (DP 64), evita usar ese datapoint: requiere reset con mando RF.
+# - If the fan does not respond after using the internal timer (DP 64), avoid that datapoint: requires reset with RF remote.
+#
 # - Si tienes problemas de señal con el ESP dentro de la carcasa metálica, coloca el ESP fuera (falso techo) o usa repetidor.
-# - Si quieres mapear porcentajes a las 6 velocidades, hazlo desde Home Assistant (input_number + automations) para una UI más amigable.
+# - If you have signal issues with the ESP inside the metal housing, place ESP outside (false ceiling) or use a repeater.
 
