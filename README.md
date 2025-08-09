@@ -19,7 +19,7 @@ Este proyecto contiene la configuración completa de ESPHome para controlar el v
 
 ## 🧰 Requisitos
 
-- Un ESP32 (por ejemplo, placa `esp32dev`)  
+- Un ESP32 C3 SuperMini con antena externa (recomendado por su mejor alcance Wi-Fi en instalaciones con carcasa metálica o interferencias).
 - Ventilador WIND CALM con control UART basado en Tuya  
 
 ---
@@ -40,12 +40,13 @@ Este proyecto contiene la configuración completa de ESPHome para controlar el v
 
 ## ⚠️ Notas y recomendaciones
 
+-Proyecto probado con un ESP32 C3 SuperMini con antena externa debido a los problemas de señal Wi-Fi ocasionados por la carcasa metálica del ventilador y el ruido electromagnético del motor. Con modelos sin antena externa la conexión era inestable, especialmente al encender el ventilador.
 - La luz del ventilador es solo **blanca**, no RGB. La selección de temperatura de color funciona correctamente mediante el datapoint `23` (niveles: 0, 500, 1000).
 - Las **velocidades** van del 1 al 6 (1 % → 100 %), y deben ser valores enteros.
 - Para usar UART, es necesario **retirar el módulo Tuya original (CB3S)**.
 - Algunos modelos de ESP32 requieren **cruzar los pines TX y RX**.
 - Asegúrate de tener **buena cobertura Wi-Fi**. La carcasa metálica del ventilador reduce la señal y, además, cuando el motor se activa, la señal puede debilitarse aún más.
-- El **beep** se activa automáticamente al encender. Puedes desactivarlo desde Home Assistant.
+- El **beep** se desactiva automáticamente al encender.
 
 ---
 
